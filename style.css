@@ -123,8 +123,9 @@ main{
 .products-content{
     margin:0px 30px 0 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 460px) );
-    gap: 50px;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr) );
+    grid-template-rows: repeat(auto-fill,max-content);
+    grid-gap: 50px;
 }
 
 
@@ -132,8 +133,9 @@ main{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 20px;
-    width: 460px;
-    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-1 h4{
@@ -197,9 +199,8 @@ main{
 
 .product-1 img{
     text-align: center;
+    object-fit: contain;
     width: 100%;
     margin: 0 auto;
-    height: 70%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
 }
